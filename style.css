@@ -61,9 +61,10 @@ body {
 
 .text {
     font-size: 1.4rem;
-    color: #4a3728; /* Café aún más oscuro para el texto */
+    color: #4a3728; /* Café oscuro */
     line-height: 1.4;
     margin-bottom: 20px;
+    text-align: center; /* ESTO CENTRA TODO EL TEXTO */
 }
 
 .question {
@@ -159,4 +160,5 @@ button {
 /* Animación de los corazones cayendo (se inyecta vía JS también pero aquí está por si acaso) */
 @keyframes caida {
     to { transform: translateY(110vh) rotate(360deg); }
+
 }
