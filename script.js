@@ -41,13 +41,19 @@ function acepto() {
     const main = document.getElementById('mainContainer');
     const final = document.getElementById('mensaje-final');
     
-    // Desvanecemos la carta principal
+    // 1. Quitamos la clase que lo esconde por completo
+    final.classList.remove('hidden'); 
+    
+    // 2. Desvanecemos la carta principal
     main.style.opacity = '0';
     
     setTimeout(() => {
-        main.classList.add('hidden'); // Ocultamos la carta
-        final.classList.add('show-final'); // Mostramos la pantalla final con el GIF
-        lanzarConfeti(); // ¡Fiesta!
+        main.classList.add('hidden'); 
+        
+        // 3. Mostramos la pantalla final
+        final.classList.add('show-final'); 
+        
+        lanzarConfeti(); 
     }, 500);
 }
 
@@ -83,4 +89,5 @@ styleSheet.innerText = `
         transform: translateY(110vh) rotate(360deg); 
     } 
 }`;
+
 document.head.appendChild(styleSheet);
